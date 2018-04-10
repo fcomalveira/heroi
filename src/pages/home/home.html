@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title>
+     <p> Meus heróis</p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="tela">
+  <ion-list>
+  
+ <ion-item  *ngFor="let heroi of herois" (click)="selecionarHeroi(heroi)"
+ [class.selecionado]="heroi == heroiSelecionado">
+ {{ heroi.nome }} </ion-item>
+
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title><p class="rod">texto embaixo</p></ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="mostraArray()">Mostrar</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
